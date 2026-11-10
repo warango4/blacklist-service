@@ -8,6 +8,12 @@ La versión vive en `blacklist/version.py` y se expone en `GET /health`.
 Para cada despliegue (por ejemplo, cada estrategia de la Entrega 1) se incrementa
 la versión y se registra aquí.
 
+## [1.0.5] - 2026-11-09
+
+### Cambiado
+
+- Despliegue continuo en AWS ECS Fargate con AWS CodePipeline, CodeBuild y CodeDeploy (Blue/Green).
+
 ## [1.0.4] - 2026-10-15
 
 ### Cambiado
