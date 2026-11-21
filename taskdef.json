@@ -23,11 +23,17 @@
         { "name": "DB_NAME", "value": "blacklist" },
         { "name": "DB_USER", "value": "postgres" },
         { "name": "LOG_LEVEL", "value": "INFO" },
-        { "name": "PROXY_FIX_X_FOR", "value": "1" }
+        { "name": "PROXY_FIX_X_FOR", "value": "1" },
+        { "name": "NEW_RELIC_APP_NAME", "value": "blacklist-service-prod" },
+        { "name": "NEW_RELIC_LOG", "value": "stdout" },
+        { "name": "NEW_RELIC_DISTRIBUTED_TRACING_ENABLED", "value": "true" },
+        { "name": "NEW_RELIC_APPLICATION_LOGGING_ENABLED", "value": "true" },
+        { "name": "NEW_RELIC_APPLICATION_LOGGING_FORWARDING_ENABLED", "value": "true" }
       ],
       "secrets": [
         { "name": "DB_PASSWORD", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/db-password" },
-        { "name": "JWT_SECRET_KEY", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/jwt-secret-key" }
+        { "name": "JWT_SECRET_KEY", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/jwt-secret-key" },
+        { "name": "NEW_RELIC_LICENSE_KEY", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/newrelic-license-key" }
       ],
       "logConfiguration": {
         "logDriver": "awslogs",

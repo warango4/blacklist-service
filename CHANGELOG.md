@@ -8,6 +8,12 @@ La versión vive en `blacklist/version.py` y se expone en `GET /health`.
 Para cada despliegue (por ejemplo, cada estrategia de la Entrega 1) se incrementa
 la versión y se registra aquí.
 
+## [1.0.6] - 2026-11-21
+
+### Agregado
+
+- Monitoreo continuo con el agente de New Relic (APM, trazas distribuidas y envío de logs). La licencia se lee de AWS Secrets Manager.
+
 ## [1.0.5] - 2026-11-09
 
 ### Cambiado

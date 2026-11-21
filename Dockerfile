@@ -17,4 +17,5 @@ USER appuser
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "2", "application:application"]
+# newrelic-admin carga el agente antes de la app; se configura con variables NEW_RELIC_*.
+CMD ["newrelic-admin", "run-program", "gunicorn", "--bind", "0.0.0.0:8000", "--workers", "2", "application:application"]

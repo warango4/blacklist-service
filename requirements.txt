@@ -24,3 +24,6 @@ psycopg2-binary==2.9.10
 
 # Servidor WSGI (el que usa AWS Elastic Beanstalk para Python)
 gunicorn==23.0.0
+
+# Agente de New Relic (monitoreo continuo, Entrega 4)
+newrelic==14.3.0

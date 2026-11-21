@@ -146,6 +146,14 @@ reemplace todas las instancias.
 | `JWT_SECRET_KEY`  | `clave-segura`     | Clave con la que se firma el Bearer Token |
 | `LOG_LEVEL`       | `INFO`             | Nivel de logs (opcional) |
 | `PROXY_FIX_X_FOR` | `1`                | Proxies delante de la app: `1` local, `2` en Beanstalk |
+| `NEW_RELIC_LICENSE_KEY` | `(licencia)` | Clave *INGEST - LICENSE* de New Relic (en AWS se lee de Secrets Manager) |
+| `NEW_RELIC_APP_NAME` | `blacklist-service-dev` | Nombre de la app en New Relic (`blacklist-service-prod` en AWS) |
+| `NEW_RELIC_LOG` | `stdout` | Destino del log del agente |
+| `NEW_RELIC_DISTRIBUTED_TRACING_ENABLED` | `true` | Trazas distribuidas |
+| `NEW_RELIC_APPLICATION_LOGGING_ENABLED` | `true` | Instrumentación de los logs de la app |
+| `NEW_RELIC_APPLICATION_LOGGING_FORWARDING_ENABLED` | `true` | Envía los logs de la app a New Relic |
+
+Las variables `NEW_RELIC_*` solo aplican al correr con Docker, porque el agente se carga con `newrelic-admin` en el `CMD` del `Dockerfile`.
 
 ## Ejecución local
 
