@@ -1,5 +1,5 @@
 """Versión del microservicio. Se incrementa en cada despliegue (ver CHANGELOG.md)."""
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 
 
 def is_stable(version: str) -> bool:
