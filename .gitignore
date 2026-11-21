@@ -35,3 +35,6 @@ doc_init/
 
 # Infra
 infra/
+
+# Resultados tests
+load-tests/resultados
