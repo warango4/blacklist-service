@@ -1,6 +1,6 @@
 {
   "family": "blacklist-service",
-  "executionRoleArn": "arn:aws:iam::382653158215:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::382653158215:role/blacklist-ecs-task-execution",
   "networkMode": "awsvpc",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "512",
@@ -26,8 +26,8 @@
         { "name": "PROXY_FIX_X_FOR", "value": "1" }
       ],
       "secrets": [
-        { "name": "DB_PASSWORD", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/db-password-W1skm1" },
-        { "name": "JWT_SECRET_KEY", "valueFrom": "arn:aws:secretsmanager:us-east-1:382653158215:secret:blacklist/jwt-secret-key-yjqAxM" }
+        { "name": "DB_PASSWORD", "valueFrom": "blacklist/db-password" },
+        { "name": "JWT_SECRET_KEY", "valueFrom": "blacklist/jwt-secret-key" }
       ],
       "logConfiguration": {
         "logDriver": "awslogs",

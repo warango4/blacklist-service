@@ -3,6 +3,12 @@
 venv/
 .venv/
 
+# Terraform (el estado contiene la contraseña de la base)
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+
 # Python
 __pycache__/
 *.py[cod]
@@ -26,3 +32,6 @@ CLAUDE.md
 
 # Enunciado de la entrega
 doc_init/
+
+# Infra
+infra/
